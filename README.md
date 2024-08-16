@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade
 
 sudo apt install zsh
 
-vai no github e procura por oh my zsh
+entrar no site do zim
 
 sudo apt install git
 
