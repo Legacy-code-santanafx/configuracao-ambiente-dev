@@ -5,6 +5,7 @@ instalar windows terminal
 entrar no site da microsoft e ver como instalar o wsl
 
 sudo apt update && sudo apt upgrade
+
 sudo apt install zsh
 
 vai no github e procura por oh my zsh
