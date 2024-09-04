@@ -46,27 +46,6 @@ instalar docker
 
 vai no site do docker e olha como
 
-sudo apt install zsh
-
-========================
-instalacao opcional
-
-entrar no site do zim
-
-instalar zim
-
-chsh -s $(which zsh)
-
-code ~/.zimrc
-
-zmodule completion
-zmodule prompt-pwd
-zmodule eriner
-
-zimfw install
-
-======================
-
 
 
 
