@@ -46,6 +46,16 @@ instalar docker
 
 vai no site do docker e olha como
 
+sudo apt install zsh -y
+sudo apt install curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+nao coloque o zsh como padrao
+nerd fonts e baixar a font meslogl nerd font
+extrair clica botao direito install
+
+troque a fonte do terminal apertando botao direito e properties
+
+
 
 
 
