@@ -58,6 +58,10 @@ extrair clica botao direito install
 
 troque a fonte do terminal apertando botao direito e properties
 
+para deixar o zsh com terminal padrao
+
+chsh -s $(which zsh)
+
 
 
 
