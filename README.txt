@@ -77,9 +77,24 @@ para deixar o zsh com terminal padrao
 
 chsh -s $(which zsh)
 
+https://github.com/junegunn/fzf instale o fzf utilizando o clone do github (mais fácil)
 
+instale o ripgrep
 
+https://github.com/BurntSushi/ripgrep
 
+sudo apt-get install ripgrep
+
+instale o bat
+
+https://github.com/sharkdp/bat
+
+sudo apt install bat
+
+abra o ~./zshrc e ~./bashrc
+
+coloque no final 
+alias bat="batcat"
 
 
 
