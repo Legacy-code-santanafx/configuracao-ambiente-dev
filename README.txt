@@ -96,6 +96,8 @@ abra o ~./zshrc e ~./bashrc
 coloque no final 
 alias bat="batcat"
 
+sudo ln -s /usr/bin/batcat /usr/bin/bat
+
 
 
 
