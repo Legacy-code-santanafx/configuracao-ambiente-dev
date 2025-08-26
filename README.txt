@@ -110,6 +110,7 @@ Clear-Host
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
+Import-Module PSColors
 
 instalar starship
 
