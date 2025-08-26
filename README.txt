@@ -100,6 +100,22 @@ sudo ln -s /usr/bin/batcat /usr/bin/bat
 
 
 
+===================================
+Powershell
+
+$PROFILE
+
+Invoke-Expression (&starship init powershell)
+Clear-Host
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows
+
+instalar starship
+
+instalar PSReadline
+
+
 
 
 
