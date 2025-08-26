@@ -115,6 +115,9 @@ instalar starship
 
 instalar PSReadline
 
+Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+ Install-Module -Name PSColors -AllowClobber -force
+
 
 
 
