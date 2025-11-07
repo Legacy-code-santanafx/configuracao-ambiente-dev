@@ -98,6 +98,71 @@ alias bat="batcat"
 
 sudo ln -s /usr/bin/batcat /usr/bin/bat
 
+===============================================
 
+# ============================================
+# MCP (Model Context Protocol) Configuration
+# ============================================
+# Paths to Windows applications (accessible via WSL2)
+
+# Chrome - used by MCP Chrome DevTools server
+export MCP_CHROME_PATH="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+
+# Figma - used by MCP Figma server
+export MCP_FIGMA_PATH="/mnt/c/Users/lucasfigueiredo.bhs/AppData/Local/Figma/Figma.exe"
+
+# Alternative: if using Chrome from other location, update the path
+# export MCP_CHROME_PATH="/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+
+# Helper function to launch Chrome with remote debugging from WSL2
+launch-chrome-debug() {
+  local port=${1:-9222}
+  "$MCP_CHROME_PATH" --remote-debugging-port=$port --user-data-dir=/tmp/chrome-debug &
+  echo "Chrome launched with remote debugging on port $port"
+}
+
+# Helper function to launch Figma from WSL2
+launch-figma() {
+  "$MCP_FIGMA_PATH" &
+  echo "Figma launched"
+}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+===============================================================
+
+ "figma/mcp-server-guide": {
+      "type": "http",
+      "url": "http://127.0.0.1:3845/mcp",
+      "gallery": "https://api.mcp.github.com/2025-09-15/v0/servers/26cb5bb7-a100-4f25-9a92-086ba4037345",
+      "version": "1.0.0",
+      "env": {
+        "FIGMA_DESKTOP_PATH": "/mnt/c/Users/lucasfigueiredo.bhs/AppData/Local/Figma/Figma.exe"
+      }
+    },
+
+    "chromedevtools/chrome-devtools-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--headless",
+        "false",
+        "--isolated",
+        "true",
+        "--channel",
+        "stable"
+        // Do NOT include --browserUrl unless you actually set one
+      ],
+      "env": {
+        "CHROME_PATH": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+      },
+      "gallery": "https://api.mcp.github.com/2025-09-15/v0/servers/13749964-2447-4c31-bcab-32731cced504",
+      "version": "0.0.1-seed"
+    }
 
 
