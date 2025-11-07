@@ -100,37 +100,4 @@ sudo ln -s /usr/bin/batcat /usr/bin/bat
 
 
 
-===================================
-Powershell
-
-$PROFILE
-
-Invoke-Expression (&starship init powershell)
-Clear-Host
-Set-PSReadLineOption -PredictionSource History
-Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -EditMode Windows
-Import-Module PSColors
-
-instalar starship
-
-instalar PSReadline
-
-Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
- Install-Module -Name PSColors -AllowClobber -force
-
-====================================
-
-# 1. Baixe o pacote .deb oficial
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-# 2. Instale o pacote com o gerenciador de pacotes
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-# 3. Corrija dependências faltando (se necessário)
-sudo apt install -f
-
-
-
-
 
