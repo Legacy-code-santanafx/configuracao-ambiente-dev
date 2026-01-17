@@ -98,6 +98,8 @@ alias bat="batcat"
 
 sudo ln -s /usr/bin/batcat /usr/bin/bat
 
+export PATH="$PATH:$HOME/.dotnet/tools"
+
 ===============================================
 
 # ============================================
